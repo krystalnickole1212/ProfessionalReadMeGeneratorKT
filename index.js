@@ -6,32 +6,59 @@ const path = require('path');
 // TODO: Create an array of questions for user input
 const questions = [ 
     {
-        name: "userName", 
-        type: "input", 
-        message:"What is your github username?"  
+        type: "input",
+        message: "What is your GitHub username?",
+        name: "userName"
+    },
+    {
+        type: "input",
+        message: "What is the title of your project?",
+        name: "title"
+    },
+    {
+        type: "input",
+        message: "What is the description of your project?",
+        name: "description"
+    },
+    {
+        type: "input",
+        message: "How do you install your project?",
+        name: "installation"
+    },
+    {
+        type: "input",
+        message: "What is the usage information?",
+        name: "usage"
+    },
+    {
+        type: "input",
+        message: "What are the contribution guidelines?",
+        name: "contribution"
+    },
+    {
+        type: "input",
+        message: "What are the test instructions?",
+        name: "tests"
+    },
+    {
+        type: "list",
+        message: "Please select a type of license.",
+        name: "license",
+        choices: [
+            "MIT",
+            "Apache",
+            "ISC",
+            "GNU GPLv3"
+        ]
+    },
+    {
+        type: "input",
+        message: "What is your email address?",
+        name: "email"
+    }
+]; 
 
-    }
-,
-    {
-        name: "", 
-        type: "" , 
-        message: 
-    }
-,
-    {
-        name: , 
-        type: , 
-        message: 
-    }
-,
-    {
-        name: , 
-        type: , 
-        message: 
-    }
-//WRITE MORE QUESTIONS 
-
-];
+;
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -44,6 +71,8 @@ function writeToFile(fileName, data) {
     });
     
 } 
+
+//return fs.writeFileSync(path.join(__dirname, fileName), data);
 
 // TODO: Create a function to initialize app
 function init() {
