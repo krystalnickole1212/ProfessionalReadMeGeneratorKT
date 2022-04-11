@@ -3,7 +3,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 const path = require('path');
 
-// TODO: Create an array of questions for user input
+array of questions for user input
 const questions = [ 
     {
         type: "input",
@@ -77,13 +77,13 @@ function writeToFile(fileName, data) {
     
 } 
 
-//return fs.writeFileSync(path.join(__dirname, fileName), data);
 
-// TODO: Create a function to initialize app
+
+unction to initialize app
 function init() {
     inquirer
     .prompt(
-      /* Pass your questions in here */
+     questions in here */
         questions
     )
     .then((answers) => {
@@ -91,7 +91,7 @@ function init() {
         const markdown = generateMarkdown(answers);
         console.log(markdown);
         writeToFile('README.md', markdown);
-      // Use user feedback for... whatever!!
+     
 
     })
     .catch((error) => {
